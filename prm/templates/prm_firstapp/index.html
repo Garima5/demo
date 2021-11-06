@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset= "utf-8">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <title>
+            Premier Rubber Mills internal software
+        </title>
+    </head>
+    <body>
+        <h1>Welcome to Premier Rubber Mills</h1>
+        <!--{{ insert_me }}-->
+        Go to formpage/ to fill out the form
+        <div>
+            <h2>Table of employees</h2>
+            {% if insert_table %}
+            <table>
+                <thead>
+                    <th>Employee id</th>
+                    <th>Belt A</th>
+                    <th>Belt B</th>
+                    <th>Belt C</th>
+                    <th>Date</th>
+                </thead>
+                {% for acc in insert_table %}
+                <tr>
+                    <td>{{acc.empid}}</td>
+                    <td>{{acc.beltA}}</td>
+                    <td>{{acc.beltB}}</td>
+                    <td>{{acc.beltC}}</td>
+                    <td>{{acc.makingDate}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p> No records found </p>
+            {% endif %}
+        </div>
+
+        Now I am in the templates sub folder
+        <!--<img src = '{% static "images/coffee.jpg" %}' alt = "static image">-->
+    </body>
+</html>

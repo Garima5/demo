@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>retrieveurl.html</title>
+    </head>
+    <body>
+        <h1>RETRIEVE URL</h1>
+        <!-- implement relative url tagging -->
+        <!-- Original way <a href = "templateapp/other.html">Other page</a> -->
+        <!-- template tagging -->
+        <a href = "{% url 'templateapp:other' %}">Other page</a> <!--name of application: name of what you want to show, name of application should match the app_name variable value in urls.py, the value is the name value in urls.py-->
+
+        
+    </body>
+</html>
