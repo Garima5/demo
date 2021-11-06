@@ -1,2 +1,2 @@
 # demo
-demo Full stack application
+Demo website for django practice
